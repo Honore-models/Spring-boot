@@ -1,6 +1,6 @@
 package first.project.first_spring_project.Services;
 
-public class StripePamentService {
+public class StripePamentService implements PaymentService {
 
     public void processPayment(int amount) {
         System.out.println("STRIPE PAYMENT SERVICE");

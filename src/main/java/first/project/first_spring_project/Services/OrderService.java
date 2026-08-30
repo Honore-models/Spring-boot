@@ -2,11 +2,13 @@ package first.project.first_spring_project.Services;
 
 public class OrderService {
 
-    public void placeOrder() {
+    public PaymentService paymentService;
 
-        var stripePayment = new StripePamentService();
-        stripePayment.processPayment(1000);
-
+    public OrderService(PaymentService paymentService) {
+        this.paymentService = paymentService;
     }
 
+    public void placeOrder() {
+        paymentService.processPayment(1000);
+    }
 }
