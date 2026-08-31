@@ -2,6 +2,7 @@ package first.project.first_spring_project;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 import first.project.first_spring_project.Services.MyFirstClass;
 
@@ -13,15 +14,21 @@ import first.project.first_spring_project.Services.MyFirstClass;
 public class FirstSpringProjectApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FirstSpringProjectApplication.class, args);
+		var ctx = SpringApplication.run(FirstSpringProjectApplication.class, args);
 
-		MyFirstClass myFirstClass = new MyFirstClass();
-		myFirstClass.sayHero();
+		MyFirstClass myFirstClass = ctx.getBean(MyFirstClass.class);
+		System.out.println(myFirstClass.sayHero());
+
 		// OrderService orderService = new OrderService(new StripePamentService());
 		// orderService.placeOrder();
 
 		// OrderService orderService2 = new OrderService(new PaypalService());
 		// orderService2.placeOrder();
+	}
+
+	@Bean
+	public MyFirstClass myFirstClass() {
+		return new MyFirstClass();
 	}
 
 }
