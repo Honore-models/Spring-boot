@@ -1,10 +1,7 @@
-package first.project.first_spring_project;
+package first.project.first_spring_project.learningClasses;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import first.project.first_spring_project.Services.FirstService;
-import first.project.first_spring_project.Services.MyFirstClass;
 
 @Configuration
 public class ApplicationConfig {

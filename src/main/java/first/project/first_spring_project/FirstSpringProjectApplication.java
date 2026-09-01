@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
 
-import first.project.first_spring_project.Services.FirstService;
-import first.project.first_spring_project.Services.MyFirstClass;
+import first.project.first_spring_project.learningClasses.FirstService;
+import first.project.first_spring_project.learningClasses.MyFirstClass;
 
 // import first.project.first_spring_project.Services.OrderService;
 // import first.project.first_spring_project.Services.PaypalService;

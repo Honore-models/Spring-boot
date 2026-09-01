@@ -1,4 +1,4 @@
-package first.project.first_spring_project.controllers;
+package first.project.first_spring_project.learningClasses;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

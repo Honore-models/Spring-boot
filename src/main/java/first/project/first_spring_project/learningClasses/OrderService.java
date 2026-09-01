@@ -1,4 +1,4 @@
-package first.project.first_spring_project.Services;
+package first.project.first_spring_project.learningClasses;
 
 public class OrderService {
 

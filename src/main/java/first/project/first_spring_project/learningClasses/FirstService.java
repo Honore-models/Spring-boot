@@ -1,4 +1,4 @@
-package first.project.first_spring_project.Services;
+package first.project.first_spring_project.learningClasses;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
