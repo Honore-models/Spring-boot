@@ -16,9 +16,14 @@ public class FirstController {
         return "Hello from first controller";
     }
 
-    @PostMapping("/honore")
+    @PostMapping("/post")
     public String post(@RequestBody String body) {
         return "Posted successfully and the body is: " + body;
+    }
+
+    @PostMapping("/post-order")
+    public String postOrder(@RequestBody Order order) {
+        return "Posted successfully and the order is: " + order;
     }
 
 }
