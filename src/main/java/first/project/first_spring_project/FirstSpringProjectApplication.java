@@ -2,6 +2,8 @@ package first.project.first_spring_project;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import first.project.first_spring_project.Services.FirstService;
 import first.project.first_spring_project.Services.MyFirstClass;
 
 // import first.project.first_spring_project.Services.OrderService;
@@ -16,6 +18,9 @@ public class FirstSpringProjectApplication {
 
 		MyFirstClass myFirstClass = ctx.getBean("firstBean", MyFirstClass.class);
 		System.out.println(myFirstClass.sayHero());
+
+		FirstService firstService = ctx.getBean(FirstService.class);
+		firstService.sayHero();
 
 		// OrderService orderService = new OrderService(new StripePamentService());
 		// orderService.placeOrder();
