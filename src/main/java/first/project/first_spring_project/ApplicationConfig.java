@@ -20,7 +20,7 @@ public class ApplicationConfig {
     }
 
     @Bean("secondBean")
-    public MyFirstClass myFirstClass2() {
+    public MyFirstClass mySecondClass() {
         return new MyFirstClass();
     }
 
