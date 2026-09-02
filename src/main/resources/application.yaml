@@ -1,0 +1,20 @@
+server:
+  port: 3000
+spring:
+  application:
+    name: first_spring_project
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring_project
+    username: honore
+    password: topgun
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+
+
+
