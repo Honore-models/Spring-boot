@@ -1,5 +1,7 @@
 package first.project.first_spring_project.controllers;
 
+import first.project.first_spring_project.models.Student;
+import first.project.first_spring_project.models.StudentRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,6 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class FirstController {
+
+    public StudentRepository studentRepository;
+
+    public FirstController(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
+    }
 
     @GetMapping("/")
     @ResponseStatus(HttpStatus.ACCEPTED)
@@ -38,6 +46,13 @@ public class FirstController {
             @RequestParam("name") String name,
             @RequestParam("age") String age) {
         return "Hello " + name + " you are " + age + " years old";
+    }
+
+    @PostMapping("/student")
+    public Student postStudent(
+            @RequestBody Student student
+    ){
+        return studentRepository.save(student);
     }
 
 }

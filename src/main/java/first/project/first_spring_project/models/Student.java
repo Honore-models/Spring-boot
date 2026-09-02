@@ -9,7 +9,6 @@ public class Student {
     @Id
     @GeneratedValue
     private int id;
-    @Column(name = "fname")
     private String firstName;
     private String lastName;
     private String email;
