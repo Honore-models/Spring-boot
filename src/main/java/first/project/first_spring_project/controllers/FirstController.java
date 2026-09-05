@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class FirstController {
 
@@ -53,6 +55,21 @@ public class FirstController {
             @RequestBody Student student
     ){
         return studentRepository.save(student);
+    }
+
+    @GetMapping("/students")
+    public List<Student> getStudents(){
+        return studentRepository.findAll();
+    }
+
+    @GetMapping("/students/{id}")
+    public Student getStudent(@PathVariable("id") int id){
+        return studentRepository.findById(id).orElse(null);
+    }
+
+    @GetMapping("students/name/{first-name}")
+    public List<Student> getStudentsByFirstName(@PathVariable("first-name") String fname){
+        return studentRepository.findAllByFirstName(fname);
     }
 
 }
